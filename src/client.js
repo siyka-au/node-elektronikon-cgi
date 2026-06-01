@@ -55,7 +55,10 @@ export class ElektronikonClient {
           ...catalog,
           languageMap,
         };
-      })();
+      })().catch((error) => {
+        this.catalogPromise = null;
+        throw error;
+      });
     }
 
     return this.catalogPromise;
