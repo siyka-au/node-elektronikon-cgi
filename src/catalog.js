@@ -9,7 +9,7 @@ import {
 
 const ANALOG_INPUT_TYPES = new Map([
   [0, { unit: "bar", normalize: (value) => value / 1000 }],
-  [1, { unit: "C", normalize: (value) => value / 10 }],
+  [1, { unit: "°C", normalize: (value) => value / 10 }],
   [9, { unit: "bar", normalize: (value) => value / 100 }],
   [10, { unit: "%", normalize: (value) => value }],
   [19, { unit: "kW", normalize: (value) => value / 10 }],
