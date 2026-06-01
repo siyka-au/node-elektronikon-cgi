@@ -1,0 +1,28 @@
+{
+  "name": "node-elektronikon-cgi",
+  "version": "0.1.0",
+  "description": "Node client for Atlas Copco Elektronikon mkv.cgi controllers",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "node-elektronikon-cgi": "./src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siyka-au/node-elektronikon-cgi.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "query": "node ./src/cli.js query",
+    "discover": "node ./src/cli.js discover",
+    "test": "node --test test/*.test.js",
+    "test:integration": "ELEKTRONIKON_RUN_INTEGRATION=1 node --test test/*.integration.test.js",
+    "test:all": "npm run test && npm run test:integration"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
